@@ -1,0 +1,22 @@
+PROJET : Affiche "J'y serai" - Gamou Ouakam 2026
+
+Contenu
+- index.html : la page
+- style.css  : le design (couleurs vert / doré / blanc)
+- script.js  : photo, nom et adaptation à l'écran
+- assets/poster-top.jpg : photos et fond de l'affiche
+
+Pour voir le projet
+1) Sur ordinateur : double-clic sur index.html (il faut Internet pour les polices).
+2) Avec VS Code : installer l'extension "Live Server", clic droit sur index.html >
+   "Open with Live Server".
+3) Sur téléphone (Android ou iPhone) : mettre le dossier en ligne (Netlify Drop,
+   GitHub Pages ou Vercel), puis ouvrir le lien. Ou, avec l'ordinateur et le
+   téléphone sur le même Wi-Fi, lancer "npx serve" dans le dossier et ouvrir
+   l'adresse IP affichée.
+
+Utilisation
+- Touchez le grand cercle : ajouter votre photo.
+- Touchez le bandeau vert : écrire votre nom.
+- Après le choix de la photo, utilisez les boutons pour télécharger ou partager l'affiche.
+- Sur téléphone, choisissez WhatsApp dans le menu de partage pour envoyer l'image avec le message.

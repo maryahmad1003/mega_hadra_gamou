@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e7a33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Gamou Ouakam 2026 – J’y serai</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+<div id="wrap">
+  <div id="poster">
+    <div id="top"></div>
+    <div id="arc"></div>
+    <div id="ring"></div>
+    <label id="me">
+      <span id="ph">Votre photo ici</span>
+      <img id="img" alt="Ma photo">
+      <input id="f" type="file" accept="image/*" hidden>
+    </label>
+    <div id="nm" contenteditable="true" spellcheck="false"></div>
+    <div id="js">J’y serai</div>
+    <div class="pill program" id="hadra"><div>Vendredi 11 décembre 2026<b>MÉGA HADRA</b></div></div>
+    <div class="pill program" id="gamou"><div>Samedi 12 décembre 2026<b>GAMOU</b><small>À partir de 21h</small></div></div>
+    <div class="pill" id="pk"><div>Place de Djoulikay · Ouakam</div></div>
+    <div id="t1">GAMOU</div>
+    <div id="t2">OUAKAM</div>
+  </div>
+</div>
+
+<section id="actions" hidden>
+  <div class="action-buttons">
+    <button id="download" type="button">Télécharger l’affiche</button>
+    <button id="share" type="button">Partager l’affiche</button>
+  </div>
+  <p id="share-status" role="status" aria-live="polite"></p>
+  <a id="whatsapp-fallback" target="_blank" rel="noopener" hidden>Ouvrir WhatsApp avec le message</a>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js?v=2"></script>
+</body>
+</html>
