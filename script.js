@@ -19,12 +19,26 @@ document.getElementById('f').addEventListener('change', e => {
   const r = new FileReader();
   r.onload = () => {
     const img = document.getElementById('img');
+    const photoArea = document.getElementById('me');
+    img.onload = () => {
+      const scale = Math.max(photoArea.clientWidth / img.naturalWidth, photoArea.clientHeight / img.naturalHeight);
+      const width = img.naturalWidth * scale;
+      const height = img.naturalHeight * scale;
+      img.style.width = width + 'px';
+      img.style.height = height + 'px';
+      img.style.left = (photoArea.clientWidth - width) / 2 + 'px';
+      img.style.top = (photoArea.clientHeight - height) / 2 + 'px';
+      img.style.display = 'block';
+      document.getElementById('ph').style.display = 'none';
+      document.getElementById('actions').hidden = false;
+      document.getElementById('share-status').textContent = '';
+      document.getElementById('whatsapp-fallback').hidden = true;
+    };
+    img.onerror = () => {
+      document.getElementById('share-status').textContent = 'Cette photo ne peut pas être affichée. Choisis un autre fichier image.';
+      document.getElementById('actions').hidden = false;
+    };
     img.src = r.result;
-    img.style.display = 'block';
-    document.getElementById('ph').style.display = 'none';
-    document.getElementById('actions').hidden = false;
-    document.getElementById('share-status').textContent = '';
-    document.getElementById('whatsapp-fallback').hidden = true;
   };
   r.readAsDataURL(file);
 });
